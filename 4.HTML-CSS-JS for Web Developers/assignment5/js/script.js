@@ -15,7 +15,7 @@ var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
-  "https://davids-restaurant.herokuapp.com/categories.json";
+  "https://davids-restaurant.herokuapp.com/categories.json"; //need https
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
@@ -336,7 +336,6 @@ function insertItemPortionName(html,
   html = insertProperty(html, portionPropName, portionValue);
   return html;
 }
-
 
 global.$dc = dc;
 
