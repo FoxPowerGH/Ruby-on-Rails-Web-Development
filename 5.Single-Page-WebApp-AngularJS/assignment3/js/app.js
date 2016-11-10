@@ -70,6 +70,7 @@ Author URI: http://jorgerodriguez.io
     function MenuSearchService($http, ApiBasePath) {
         var service = this;
 
+        // process result and only keep items that match
         var foundItems = [];
 
         service.getMatchedMenuItems = function (searchTerm) {
@@ -84,6 +85,7 @@ Author URI: http://jorgerodriguez.io
                         foundItems.push(response.data.menu_items[i]);
                     }
                 }
+                // return processed items
                 //console.log(foundItems);
                 return foundItems;
             }).catch(function (error) {
