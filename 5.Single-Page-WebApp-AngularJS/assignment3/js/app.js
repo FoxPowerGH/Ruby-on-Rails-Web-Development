@@ -17,7 +17,7 @@ Author URI: http://jorgerodriguez.io
     //Custom directive
     function FoundItemsDirective() {
         var ddo = {
-            templateUrl: "foundItemsList.html",
+            templateUrl: "FoundItemsList.html",
             scope: {
                 found: "<",
                 onRemove: "&"
