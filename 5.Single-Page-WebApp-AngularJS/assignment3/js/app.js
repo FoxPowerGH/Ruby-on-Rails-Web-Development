@@ -85,7 +85,6 @@ Author URI: http://jorgerodriguez.io
                     }
                 }
                 // return processed items
-                //console.log(foundItems);
                 return foundItems;
             }).catch(function (error) {
                 return error;
