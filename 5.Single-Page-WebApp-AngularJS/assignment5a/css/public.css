@@ -37,6 +37,7 @@
 }
 /* END HOME PAGE */
 
+
 /* MENU CATEGORIES PAGE */
 .category-tile {
   position: relative;
@@ -112,36 +113,6 @@ h3.menu-item-title {
   font-style: italic;
 }
 /* END SINGLE CATEGORY PAGE */
-
-/* SIGN UP PAGE*/
-input {
-  color: black;
-  margin-bottom: 10px;
-}
-
-button {
-  color: black;
-}
-
-button:disabled {
-  color: grey;
-  font-style: italic;
-}
-
-.myfavdish {
-  width: 25px;
-}
-
-.ng-touched.ng-valid {
-  border: 2px solid;
-}
-
-.ng-touched.ng-invalid {
-  border: 2px red solid;
-}
-
-/* END SIGN UP PAGE*/
-
 
 
 /********** Large devices only **********/

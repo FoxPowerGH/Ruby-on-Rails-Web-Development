@@ -8,14 +8,12 @@ angular.module('common')
 MenuService.$inject = ['$http', 'ApiPath'];
 function MenuService($http, ApiPath) {
   var service = this;
-  var savedUserInfo = [];
 
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
       return response.data;
     });
   };
-
 
   service.getMenuItems = function (category) {
     var config = {};
@@ -28,21 +26,11 @@ function MenuService($http, ApiPath) {
     });
   };
 
-  service.getFavDish = function (favdish) {
-    return $http.get(ApiPath + '/menu_items/' + favdish + '.json').then(function (response) {
-      return response.data;
-    });
+  service.getMenuItemByShortName = function(shortname){
+    return $http.get(ApiPath + '/menu_items/' + shortname + '.json')
+                .then(function(response){return response.data});
   };
 
-  service.saveUserInfo = function (user, matchedDish) {
-      savedUserInfo = [user.firstname, user.lastname, user.email, user.phone, user.favdish, matchedDish, matchedDish.name, matchedDish.description]
-  }
-
-  service.getSavedUserInfo = function () {
-    return savedUserInfo;
-  }
-
 }
-
 
 })();
